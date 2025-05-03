@@ -30,3 +30,27 @@
 *.exe
 *.out
 *.app
+# CMake build directories
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+
+# Visual Studio temporary files
+*.vcxproj*
+*.sln
+*.user
+*.opensdf
+*.sdf
+*.cache
+*.log
+*.tlog
+*.ipch
+*.pdb
+*.idb
+
+# Backup and system files
+.DS_Store
+Thumbs.db
