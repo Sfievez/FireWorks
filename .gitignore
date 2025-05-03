@@ -54,3 +54,7 @@ cmake_install.cmake
 # Backup and system files
 .DS_Store
 Thumbs.db
+
+# Visual Studio and CLion directories
+.vs/
+.idea/
