@@ -29,3 +29,7 @@ This project uses **CMake** and (optionally) **vcpkg** for dependency management
 2. **Launch**  
    Then click the **"Launch"** button to trigger a series of fireworks.  
    Each primary firework (type 0) will explode and generate multiple child particles.
+
+
+![Fire simulation example](fire_example.png)
+
