@@ -21,7 +21,6 @@ Mover::Mover() {
     m_forces = new cyclone::ParticleForceRegistry();
     m_forces->add(m_particle, m_gravity);
     m_forces->add(m_particle, m_drag);
-    // m_spring = new MyAnchoredSpring(new cyclone::Vector3(0, 0, 0), 5, 3);
     m_spring = nullptr;
 }
 
@@ -31,7 +30,6 @@ Mover::~Mover() {
     delete m_drag;
     delete m_forces;
     if (m_spring) delete m_spring;
-    // delete m_spring1
 }
 
 void Mover::update(float duration) {
@@ -97,13 +95,6 @@ void Mover::checkCollisionWithPlane(const cyclone::Vector3& p1, const cyclone::V
     normal *= -1;
     checkCollisionWithPlane(p1, normal);
 }
-
-// void setConnection(Mover * a)
-// {
-//     m_other_particle = a->m_particle;
-//     m_spring1 = new cyclone::Myspring(m_other_particle, 7, 7);
-//     m_forces->add(m_particle, m_spring);
-// }
 
 void Mover::setConnection(Vector3* anchor, double k, double restLength) {
     std::cout << "[DEBUG] setConnection() with anchor pointer: " << anchor << std::endl;

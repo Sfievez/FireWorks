@@ -7,19 +7,6 @@ using namespace cyclone;
 
 void MyAnchoredSpring::updateForce(Particle* particle, real duration)
 {
-
-    // if (anchor == nullptr) {
-    //     std::cerr << "[ERROR] anchor is null!" << std::endl;
-    //     return;
-    // }
-    // try {
-    //     std::cout << "[DEBUG] anchor value: " << anchor->x << ", " << anchor->y << ", " << anchor->z << std::endl;
-    // } catch (...) {
-    //     std::cerr << "[EXCEPTION] anchor caused a crash!" << std::endl;
-    //     return;
-    // }
-
-    
     if (!particle->hasFiniteMass()) return;
 
     Vector3 position;

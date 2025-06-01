@@ -32,14 +32,7 @@
 class MyGlWindow : public Fl_Gl_Window {
 public:
     MyGlWindow(int x, int y, int w, int h);
-    ~MyGlWindow() {
-        for (Mover* mover : m_movers) delete mover;
-        m_movers.clear();
-        delete m_viewer;
-        delete anchor;
-        delete mover_connection;
-        delete m_fireworks;
-    }
+    ~MyGlWindow();
     Fl_Slider* time;
     Fl_Light_Button* ui;
     int run;

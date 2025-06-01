@@ -119,12 +119,9 @@ int main()
 		win->launchSeries();
 		}, gl);
 
-
 	wind->end();
 
-
 	wind->show();	// this actually opens the window
-
 
 	Fl::run();
 	delete wind;

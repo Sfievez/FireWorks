@@ -43,6 +43,15 @@ MyGlWindow::MyGlWindow(int x, int y, int w, int h) :
 	selected = -1;
 }
 
+MyGlWindow::~MyGlWindow() {
+	for (Mover* mover : m_movers) delete mover;
+	m_movers.clear();
+	delete m_viewer;
+	delete anchor;
+	delete mover_connection;
+	delete m_fireworks;
+}
+
 void MyGlWindow::addBall(float x, float y, float z) {
 	Mover* newBall = new Mover();
 	newBall->m_particle->setPosition(x, y, z);
@@ -128,7 +137,6 @@ void MyGlWindow::draw()
 
     setProjection();
     
-
 	// ground light
 	setProjection();
 	setupFloor();
